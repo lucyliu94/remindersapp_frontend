@@ -25,19 +25,28 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
   }
 
   return <form onSubmit={handleSubmission}>
-    <input
-      type="text"
-      onChange={handleChange}
-      value={formData.title}
-      name="title"
-      />
-    <input
-    type="text"
-    onChange={handleChange}
-    value={formData.details}
-    name="details"
-    />
-    <input type="submit" value={buttonLabel} />
+    
+    <label> Title: 
+        <input
+        type="text"
+        onChange={handleChange}
+        value={formData.title}
+        name="title"
+        placeholder= "ex: Feed my dog... "
+        />
+    </label>
+
+    <label> Details: 
+        <input
+        type="text"
+        onChange={handleChange}
+        value={formData.details}
+        name="details"
+        placeholder="ex: 1/2 a cup twice a day..."
+        />
+        <input type="submit" value={buttonLabel} />
+    </label>
+    
   </form>
 };
 

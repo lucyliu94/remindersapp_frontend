@@ -21,6 +21,8 @@ function App() {
     title:"",
     details: ""
   }
+  // target the reminders in the form 
+  const [targetReminder, setTargetReminder] = useState(nullReminder)
 
 //  Function to get list of REMINDERS from api
 const getReminders = async () => {
@@ -36,6 +38,7 @@ useEffect(() => {
 ////////
 //ALL FUNCTIONS
 ////////
+//add 
 const addReminders = async(newReminder) => {
   const response = await fetch(url, {
     method:"post",
@@ -47,22 +50,58 @@ const addReminders = async(newReminder) => {
   getReminders();
 };
 
+//edit
+
+const getTargetReminder = (reminder) => {
+  setTargetReminder(reminder);
+  navigate("/edit")
+}
+
+
+//update
+const updateReminder = async(reminder) =>{
+  await fetch(url + reminder.id,{
+    method: "put",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(reminder)
+  }); 
+  getReminders();
+};
+
+//delete
+
+const deleteReminder = async (reminder) => {
+  await fetch (url + reminder.id, {
+    method: "delete"
+  });
+  getReminders()
+  navigate("/")
+}
+
 
   return (
     <div className="App">
+      <Link to="/"><h1>All My Reminders</h1></Link>
+      <Link to="/new"><button>Create a New Reminder </button></Link>
       <Routes>
         <Route path="/" element={<AllReminders reminders={reminders}/>}/>
         <Route path="/reminders/:id" element={<SingleReminder 
         reminders={reminders} 
-        // edit={getTargetReminder}
-        // deleteReminder={deleteReminder}
+        edit={getTargetReminder}
+        deleteReminder={deleteReminder}
         />} />
         <Route path="/new" element={<Form
         initialReminder={nullReminder}
         handleSubmit={addReminders}
         buttonLabel="Create New Reminder"
         />}/>
-        <Route path="edit"/>
+        <Route path="/edit" element={<Form
+          initialReminder={targetReminder}
+          handleSubmit={updateReminder}
+          buttonLabel="Update Reminder"
+        />}/>
       </Routes>
 
     </div>
