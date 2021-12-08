@@ -5,6 +5,9 @@ import {useState, useEffect} from "react";
 import AllReminders from "./pages/AllReminders"
 import SingleReminder from './pages/SingleReminder';
 import Form from './pages/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
 
 function App() {
 
@@ -84,7 +87,7 @@ const deleteReminder = async (reminder) => {
   return (
     <div className="App">
       <Link to="/"><h1>All My Reminders</h1></Link>
-      <Link to="/new"><button>Create a New Reminder </button></Link>
+      <Link to="/new"><Button>Create a New Reminder </Button></Link>
       <Routes>
         <Route path="/" element={<AllReminders reminders={reminders}/>}/>
         <Route path="/reminders/:id" element={<SingleReminder 

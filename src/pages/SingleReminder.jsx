@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 const SingleReminder = ({reminders, edit, deleteReminder}) => {
     const params = useParams()
@@ -10,12 +11,11 @@ const SingleReminder = ({reminders, edit, deleteReminder}) => {
     return <div>
         <h1>{reminder?.title}</h1>
         <h2>{reminder?.details}</h2>
-        <button onClick={() => edit(reminder)}>Edit</button>
-        <button onClick={() => deleteReminder(reminder)}>Delete</button>
+        <Button onClick={() => edit(reminder)}>Edit</Button>
+        <Button onClick={() => deleteReminder(reminder)}>Delete</Button>
         <Link to="/">
-            <button>Go Back</button>
+            <Button>Go Back</Button>
         </Link>
-
     </div>
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 const Reminder = ({ reminder }) => {
-    return  <div>
+    return  <div className="border rounded border-dark w-50 p-5 mx-auto">
     <Link to={`/reminders/${reminder.id}`}>
       <h1>{reminder.title}</h1>
     </Link>
