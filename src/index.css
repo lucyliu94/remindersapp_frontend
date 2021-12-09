@@ -33,11 +33,11 @@ code {
 /*STYLING ALL REMINDERS PAGE*/
 .all-reminders {
   background-color: white;
-  transition: transform .2s;
+  transition: transform .3s;
+  box-shadow: 5px 5px 5px lightgrey;
 }
 
-
 .all-reminders:hover {
-  transform: scale(1.5)
+  transform: scale(1.3)
 }
 
