@@ -1,5 +1,50 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom"
+import styled from "styled-components";
+
+const Styles = styled.div`
+ padding: 20px;
+
+ form {
+   background: white;
+   border: 1px solid #dedede;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin: 0 auto;
+   max-width: 500px;
+   padding: 30px 50px;
+ }
+
+ input {
+   border: 1px solid #d9d9d9;
+   border-radius: 4px;
+   box-sizing: border-box;
+   padding: 10px;
+   width: 100%;
+ }
+
+ label {
+   color: #3d3d3d;
+   display: block;
+   font-family: sans-serif;
+   font-size: 15px;
+   font-weight: 500;
+   margin-bottom: 5px;
+   margin-top: 10px;
+ }
+
+ span {
+   font-size: 20px;
+ }
+
+ .submitButton {
+   background-color: #6976d9;
+   color: white;
+   font-family: sans-serif;
+   font-size: 14px;
+   margin: 20px 0px;
+`;
 
 const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
 
@@ -24,9 +69,10 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
 
   }
 
-  return <form onSubmit={handleSubmission}>
+  return <Styles>
+    <form className = "form-box" onSubmit={handleSubmission}>
     
-    <label> Title: 
+    <label> <span>Title: </span>
         <input
         type="text"
         onChange={handleChange}
@@ -36,7 +82,7 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
         />
     </label>
 
-    <label> Details: 
+    <label> <span>Details: </span>
         <input
         type="text"
         onChange={handleChange}
@@ -44,10 +90,11 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
         name="details"
         placeholder="ex: 1/2 a cup twice a day..."
         />
-        <input type="submit" value={buttonLabel} />
+        <input type="submit" className="submitButton" value={buttonLabel} />
     </label>
     
   </form>
+  </Styles>
 };
 
 export default Form;

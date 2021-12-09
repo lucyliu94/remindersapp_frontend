@@ -19,3 +19,25 @@ code {
 .border {
   margin-top: 2%;
 }
+
+.title{
+  font-family: 'Bungee Outline', cursive;
+  font-family: 'Oxygen', sans-serif;
+  font-family: 'Sansita Swashed', cursive;
+  color: black;
+  font-size: 4em;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+/*STYLING ALL REMINDERS PAGE*/
+.all-reminders {
+  background-color: white;
+  transition: transform .2s;
+}
+
+
+.all-reminders:hover {
+  transform: scale(1.5)
+}
+

@@ -86,7 +86,7 @@ const deleteReminder = async (reminder) => {
 
   return (
     <div className="App">
-      <Link to="/"><h1>All My Reminders</h1></Link>
+      <Link to="/"><h1 className="title">Reminders</h1></Link>
       <Link to="/new"><Button>Create a New Reminder </Button></Link>
       <Routes>
         <Route path="/" element={<AllReminders reminders={reminders}/>}/>
@@ -98,7 +98,7 @@ const deleteReminder = async (reminder) => {
         <Route path="/new" element={<Form
         initialReminder={nullReminder}
         handleSubmit={addReminders}
-        buttonLabel="Create New Reminder"
+        buttonLabel="Add to Reminders"
         />}/>
         <Route path="/edit" element={<Form
           initialReminder={targetReminder}
