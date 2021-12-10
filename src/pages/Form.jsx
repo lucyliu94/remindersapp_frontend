@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom"
 import styled from "styled-components";
+import { Carousel } from 'react-bootstrap'
 
 const Styles = styled.div`
  padding: 20px;
@@ -44,6 +45,32 @@ const Styles = styled.div`
    font-family: sans-serif;
    font-size: 14px;
    margin: 20px 0px;
+
+ }
+  h3, p {
+     color: black;
+   }
+
+   h3 {
+    margin-top: 15%;
+   }
+
+  h1 {
+    margin-top: 10%;
+  }
+
+  .reminder-items {
+    width: 50%;
+    display: inline-block;
+    border-top: 1px dotted black;
+  }
+
+  .reminder-caption {
+    border: 1px solid black;
+    display: inline-block;
+  }
+
+
 `;
 
 const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
@@ -94,6 +121,29 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
     </label>
     
   </form>
+
+
+  <h1>Past Reminders</h1>
+    <Carousel className="reminder-items" >
+        <Carousel.Item style={{'height':"180px"}}>
+            <Carousel.Caption className="reminder-caption">
+                <h3>Feed the Cat</h3>
+                <p>Twice a day. 1/2 cup dry + 1/2 cup wet food</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item style={{'height':"180px"}}>
+            <Carousel.Caption className="reminder-caption">
+                <h3>Buy more cookies!</h3>
+                <p>Half a dozen from House of Gourmand</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item style={{'height':"180px"}}>
+            <Carousel.Caption className="reminder-caption">
+                <h3>Pay Rent</h3>
+                <p>Every month on the 15th</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+    </Carousel>
   </Styles>
 };
 
