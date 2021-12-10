@@ -6,7 +6,9 @@ import AllReminders from "./pages/AllReminders"
 import SingleReminder from './pages/SingleReminder';
 import Form from './pages/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+
 
 
 function App() {
@@ -87,7 +89,11 @@ const deleteReminder = async (reminder) => {
   return (
     <div className="App">
       <Link to="/"><h1 className="title">Reminders</h1></Link>
-      <Link to="/new"><Button>Create a New Reminder </Button></Link>
+      <Link to="/new">
+        <button className="add-button">
+          <FontAwesomeIcon icon={faPlusCircle}/>
+        </button>
+      </Link>
       <Routes>
         <Route path="/" element={<AllReminders reminders={reminders}/>}/>
         <Route path="/reminders/:id" element={<SingleReminder 
@@ -106,6 +112,8 @@ const deleteReminder = async (reminder) => {
           buttonLabel="Update Reminder"
         />}/>
       </Routes>
+
+
 
     </div>
   );

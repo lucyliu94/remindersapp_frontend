@@ -72,7 +72,7 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
   return <Styles>
     <form className = "form-box" onSubmit={handleSubmission}>
     
-    <label> <span>Title: </span>
+    <label> <span>Title </span>
         <input
         type="text"
         onChange={handleChange}
@@ -82,7 +82,7 @@ const Form = ({initialReminder, handleSubmit, buttonLabel}) => {
         />
     </label>
 
-    <label> <span>Details: </span>
+    <label> <span>Details </span>
         <input
         type="text"
         onChange={handleChange}
