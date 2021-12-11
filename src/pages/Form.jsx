@@ -15,6 +15,7 @@ const Styles = styled.div`
    margin: 0 auto;
    max-width: 500px;
    padding: 30px 50px;
+   box-shadow: 5px 5px 5px lightgrey;
  }
 
  input {
@@ -57,6 +58,10 @@ const Styles = styled.div`
 
   h1 {
     margin-top: 10%;
+    font-family: 'Bungee Outline', cursive;
+    font-family: 'Oxygen', sans-serif;
+    font-family: 'Sansita Swashed', cursive;
+    color: black;
   }
 
   .reminder-items {

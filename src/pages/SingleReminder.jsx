@@ -17,6 +17,8 @@ const Styles = styled.div`
    max-width: 700px;
    padding: 30px 50px;
    padding-bottom: 5%;
+   background-color: white;
+   box-shadow: 5px 5px 5px lightgrey;
  }
 
  h2, h1 {
