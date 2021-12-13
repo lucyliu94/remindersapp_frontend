@@ -5,10 +5,6 @@
 Are you tired of forgetting small everyday tasks such as paying your rent, finishing your homework or even taking your supplements on time? This reminders app is here to help you keep track of your everyday reminders. Users will be able to create and view a list of all their reminders. The app will tell you when your reminder is due or if it is overdue. You will also be able to view past completed reminders for reference. 
 
 
-[Backend repo](to be added)\
-[Deployed frontend](TO BE ADDED)\
-[Deployed backend](TO BE ADDED)\
-
 ## Technologies Used
 - React
 - Express
