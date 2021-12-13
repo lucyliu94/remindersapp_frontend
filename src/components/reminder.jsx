@@ -11,6 +11,7 @@ const Styles = styled.div`
  h2 {
    margin-top: 6%;
    font-size: 1em;
+   color: grey;
  }
 `;
 
