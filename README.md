@@ -33,8 +33,7 @@ Are you tired of forgetting small everyday tasks such as paying your rent, finis
 | Edit           | /editReminder/:id              | PUT       | Edit the reminder's details                                                 |
 | Delete         | /reminders                     | DELETE    | Delete the reminder                                                         |
 | Create         | /newReminder                   | POST      | Create a new reminder                                                       |
-| Index          | /completedReminder             | GET       | Display past completed reminders                                            |
-| Show           | /completedReminder             | GET       | Display past completed reminder details (cannot edit)                       |
+
 
 
 
@@ -46,5 +45,7 @@ Are you tired of forgetting small everyday tasks such as paying your rent, finis
 - Users can mark reminders as completed, and that will move the reminder to the completedReminder page
 
 ## Challenges
-TBA
+- I originally wanted to add authentication but it was a bit too difficult for me to grasp the concept so I ended up not adding authentication to the project. This is something I definitely want to focus on and add on in the future
+- I found myself being a bit inconsistent with the way I wanted to style the project. I had started with bootstrap and then I eventually used styled components. Going forward, I will plan ahead and decide on the way I want to style beforehand.
+- I used Bootstrap for the carousel which I found a bit tricky. Most carousel's included images but for mine, I only wanted text which took a while to properly format. 
 
