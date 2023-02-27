@@ -16,7 +16,7 @@ function App() {
   const navigate = useNavigate()
 
   //api 
-  const url = "https://remindersapp-backend-ll.herokuapp.com/reminders/";
+  const url = "https://remindersapp-backend-ll.onrender.com/reminders/";
 
   //state to hold all the reminders
   const [reminders, setReminders] = useState([]);
